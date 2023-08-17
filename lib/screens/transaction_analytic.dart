@@ -26,10 +26,6 @@ class TransactionAnalyticScreen extends StatelessWidget {
           SizedBox(
             width: 200,
             height: 400,
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: BarChartWidget(transaction: transaction),
-            ),
           ),
         ],
       ),
