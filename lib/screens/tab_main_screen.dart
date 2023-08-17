@@ -12,6 +12,8 @@ class ExpenseTapBar extends StatelessWidget {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.white,
           title: const Text(
             'Expenses',
             style: TextStyle(
@@ -56,13 +58,13 @@ class ExpenseTapBar extends StatelessWidget {
               child: TabBarView(
                 children: [
                   TransactionAnalyticScreen(
-                    transaction: dummyTransactions,
+                    transactions: dummyTransactions,
                   ),
                   TransactionAnalyticScreen(
-                    transaction: dummyTransactions,
+                    transactions: dummyTransactions,
                   ),
                   TransactionAnalyticScreen(
-                    transaction: dummyTransactions,
+                    transactions: dummyTransactions,
                   ),
                 ],
               ),

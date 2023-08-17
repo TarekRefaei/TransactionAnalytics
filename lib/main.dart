@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ExpenseTapBar() // Replace with actual data
+      home: const ExpenseTapBar(),
     );
   }
 }
