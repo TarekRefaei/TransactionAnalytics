@@ -31,8 +31,11 @@ class CategoryInfoCard extends StatelessWidget {
   final double totalExpense;
   final Transaction transaction;
 
-  const CategoryInfoCard(
-      {super.key, required this.transaction, required this.totalExpense});
+  const CategoryInfoCard({
+    super.key,
+    required this.transaction,
+    required this.totalExpense,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -71,10 +74,7 @@ class CategoryInfoCard extends StatelessWidget {
                   children: [
                     Text(
                       transaction.category,
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 24
-                      ),
+                      style: const TextStyle(color: Colors.black, fontSize: 24),
                     ),
                     const SizedBox(
                       height: 8,
@@ -95,14 +95,14 @@ class CategoryInfoCard extends StatelessWidget {
                     Text(
                       "${transaction.amount} \$",
                       style: const TextStyle(
-                          color: Colors.black,
+                        color: Colors.black,
                       ),
                     ),
                     const SizedBox(
                       height: 8,
                     ),
                     Text(
-                      "${percentage*100} %",
+                      "${(percentage * 100).toStringAsFixed(2)} %",
                       style: TextStyle(
                         color: Colors.grey[800],
                         fontSize: 12,
@@ -118,20 +118,3 @@ class CategoryInfoCard extends StatelessWidget {
     );
   }
 }
-
-// Column(
-// crossAxisAlignment: CrossAxisAlignment.start,
-// children: [
-// Text(
-// transaction.category,
-// style: const TextStyle(
-// fontSize: 18,
-// fontWeight: FontWeight.bold,
-// ),
-// ),
-// const SizedBox(height: 4),
-// Text('\$${transaction.amount.toStringAsFixed(2)}'),
-// const SizedBox(height: 4),
-// Text('${(percentage * 100).toStringAsFixed(2)}% of Total Expense'),
-// ],
-// ),

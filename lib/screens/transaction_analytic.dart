@@ -14,14 +14,12 @@ class TransactionAnalyticScreen extends StatelessWidget {
     final double totalExpense = transactions
         .map((transaction) => transaction.amount)
         .reduce((sum, amount) => sum + amount);
-
     return SingleChildScrollView(
       padding: const EdgeInsets.all(8.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           SizedBox(
-            width: 200,
             height: 400,
             child: PieChartWidget(
               transactions: transactions,
@@ -29,9 +27,10 @@ class TransactionAnalyticScreen extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 200,
             height: 400,
-            child: BarChartWidget(transactions: transactions),
+            child: BarChartWidget(
+              transactions: transactions,
+            ),
           ),
         ],
       ),
