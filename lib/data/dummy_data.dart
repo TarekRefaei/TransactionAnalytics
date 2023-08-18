@@ -58,3 +58,17 @@ List<Transaction> dummyTransactions = [
     DateTime(2023, 8, 5),
   ),
 ];
+
+List<String> months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+];

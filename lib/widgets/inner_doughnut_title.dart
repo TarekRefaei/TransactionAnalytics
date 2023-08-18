@@ -16,12 +16,19 @@ class InnerDoughnutTitle extends StatelessWidget {
         const Text(
           "Total Expenses",
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 14, color: Colors.grey),
+          style: TextStyle(
+            fontFamily: "Lato-Thin",
+            fontSize: 14,
+            color: Colors.grey,
+          ),
         ),
         Text(
           "$totalExpense \$",
           textAlign: TextAlign.center,
-          style: const TextStyle(fontSize: 40),
+          style: const TextStyle(
+            fontFamily: "Lato-Bold",
+            fontSize: 40,
+          ),
         ),
       ],
     );

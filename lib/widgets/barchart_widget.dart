@@ -17,7 +17,7 @@ class BarChartWidget extends StatelessWidget {
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemCount: transactions.length,
-      itemBuilder: (ctx, index) {
+      itemBuilder: (context, index) {
         return CategoryInfoCard(
           totalExpense: totalExpense,
           transaction: transactions[index],
@@ -74,15 +74,20 @@ class CategoryInfoCard extends StatelessWidget {
                   children: [
                     Text(
                       transaction.category,
-                      style: const TextStyle(color: Colors.black, fontSize: 24),
+                      style: const TextStyle(
+                        fontFamily: "Lato-Bold",
+                        color: Colors.black,
+                        fontSize: 24,
+                      ),
                     ),
                     const SizedBox(
                       height: 8,
                     ),
                     Text(
                       "${transaction.transactionAmount} Transactions",
-                      style: TextStyle(
-                        color: Colors.grey[800],
+                      style: const TextStyle(
+                        fontFamily: "Lato-Thin",
+                        color: Colors.black,
                         fontSize: 12,
                       ),
                     ),
@@ -95,6 +100,7 @@ class CategoryInfoCard extends StatelessWidget {
                     Text(
                       "${transaction.amount} \$",
                       style: const TextStyle(
+                        fontFamily: "Lato-Bold",
                         color: Colors.black,
                       ),
                     ),
@@ -105,6 +111,7 @@ class CategoryInfoCard extends StatelessWidget {
                       "${(percentage * 100).toStringAsFixed(2)} %",
                       style: TextStyle(
                         color: Colors.grey[800],
+                        fontFamily: "Lato-Thin",
                         fontSize: 12,
                       ),
                     ),

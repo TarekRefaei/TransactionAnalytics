@@ -2,7 +2,6 @@ import 'package:card_transaction_analytics/screens/transaction_analytic.dart';
 import 'package:flutter/material.dart';
 import '../data/dummy_data.dart';
 
-
 class ExpenseTapBar extends StatelessWidget {
   const ExpenseTapBar({Key? key}) : super(key: key);
 
@@ -18,6 +17,7 @@ class ExpenseTapBar extends StatelessWidget {
           title: const Text(
             'Expenses',
             style: TextStyle(
+              fontFamily: "Lato-Bold",
               color: Colors.black,
             ),
             textAlign: TextAlign.center,
@@ -28,12 +28,15 @@ class ExpenseTapBar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const TabBar(
+              labelColor: Colors.black,
+              unselectedLabelColor: Colors.grey,
+              indicatorColor: Colors.white,
               tabs: [
                 Tab(
                   child: Text(
                     "Weekly",
                     style: TextStyle(
-                      color: Colors.black,
+                      fontFamily: "Lato-Thin",
                     ),
                   ),
                 ),
@@ -41,7 +44,7 @@ class ExpenseTapBar extends StatelessWidget {
                   child: Text(
                     "Monthly",
                     style: TextStyle(
-                      color: Colors.black,
+                      fontFamily: "Lato-Thin",
                     ),
                   ),
                 ),
@@ -49,7 +52,7 @@ class ExpenseTapBar extends StatelessWidget {
                   child: Text(
                     "Yearly",
                     style: TextStyle(
-                      color: Colors.black,
+                      fontFamily: "Lato-Thin",
                     ),
                   ),
                 ),
