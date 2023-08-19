@@ -31,7 +31,7 @@ class TransactionAnalyticScreen extends StatelessWidget {
           children: [
             Expanded(
               flex: 3,
-              child: PieChartWidget(
+              child: DoughnutChartWidget(
                 transactions: transactions,
                 totalExpense: totalExpense,
               ),

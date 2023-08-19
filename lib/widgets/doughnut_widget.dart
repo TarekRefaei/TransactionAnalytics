@@ -3,11 +3,11 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 import '../models/transaction.dart';
 import 'inner_doughnut_title.dart';
 
-class PieChartWidget extends StatelessWidget {
+class DoughnutChartWidget extends StatelessWidget {
   final List<Transaction> transactions;
   final double totalExpense;
 
-  const PieChartWidget({
+  const DoughnutChartWidget({
     Key? key,
     required this.transactions,
     required this.totalExpense,
