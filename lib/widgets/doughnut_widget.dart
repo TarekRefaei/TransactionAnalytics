@@ -20,7 +20,7 @@ class DoughnutChartWidget extends StatelessWidget {
         child: SfCircularChart(
           annotations: <CircularChartAnnotation>[
             CircularChartAnnotation(
-              widget: InnerDoughnutTitle(totalExpense:totalExpense),
+              widget: InnerDoughnutTitle(totalExpense: totalExpense),
             ),
           ],
           series: [

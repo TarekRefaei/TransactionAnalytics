@@ -63,12 +63,15 @@ class ExpenseTapBar extends StatelessWidget {
                 children: [
                   TransactionAnalyticScreen(
                     transactions: dummyTransactions,
+                    timePeriod: weeks,
                   ),
                   TransactionAnalyticScreen(
                     transactions: dummyTransactions,
+                    timePeriod: months,
                   ),
                   TransactionAnalyticScreen(
                     transactions: dummyTransactions,
+                    timePeriod: years,
                   ),
                 ],
               ),

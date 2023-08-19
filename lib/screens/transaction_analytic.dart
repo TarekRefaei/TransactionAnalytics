@@ -7,10 +7,12 @@ import '../widgets/month_selector.dart';
 
 class TransactionAnalyticScreen extends StatelessWidget {
   final List<Transaction> transactions;
+  final List<String> timePeriod;
 
   const TransactionAnalyticScreen({
     Key? key,
     required this.transactions,
+    required this.timePeriod,
   }) : super(key: key);
 
   @override
@@ -35,9 +37,10 @@ class TransactionAnalyticScreen extends StatelessWidget {
                 transactions: transactions,
                 totalExpense: totalExpense,
               ),
-            ),const Expanded(
+            ),
+            Expanded(
               flex: 1,
-              child: MonthSelector(),
+              child: MonthSelector(timePeriod: timePeriod),
             ),
             Expanded(
               flex: 3,
